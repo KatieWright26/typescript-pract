@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React, { FunctionComponent, useState } from 'react';
+import TweetInput from './components/TweetInput';
+import Tweets from './components/Tweets';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export interface TweetType {
+    id: string;
+    text: string;
+    userId: string;
 }
+
+const tweets = [
+    {
+        id: '1',
+        text: 'testing text',
+        userId: '1',
+    },
+    {
+        id: '2',
+        text: 'testing text',
+        userId: '2',
+    },
+    {
+        id: '3',
+        text: 'testing text',
+        userId: '3',
+    },
+    {
+        id: '4',
+        text: 'testing text',
+        userId: '4',
+    },
+];
+
+const App: FunctionComponent<{}> = () => {
+    const [tweetList, setTweetList] = useState(tweets);
+
+    const handleClick = (newTweet: TweetType): void => {
+        const newTweets = tweets.concat(newTweet);
+
+        setTweetList(newTweets);
+    };
+
+    return (
+        <div className="App">
+            <h1>Typescript practise</h1>
+            <TweetInput handleClick={newTweet => handleClick(newTweet)}/>
+            <Tweets tweets={tweetList}/>
+        </div>
+    );
+};
 
 export default App;
