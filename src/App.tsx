@@ -1,36 +1,20 @@
+/* eslint-disable max-len */
 import './App.css';
 import React, { FunctionComponent, useState } from 'react';
 import TweetInput from './components/TweetInput';
 import Tweets from './components/Tweets';
+import { tweets } from './tweets';
+import { TweetType } from './types';
 
-export interface TweetType {
-    id: string;
-    text: string;
-    userId: string;
-}
+const sortedTweets = tweets.sort((tweetA, tweetB) => tweetB.id - tweetA.id);
 
-const tweets = [
-    {
-        id: '1',
-        text: 'testing text',
-        userId: '1',
-    },
-    {
-        id: '2',
-        text: 'testing text',
-        userId: '2',
-    },
-    {
-        id: '3',
-        text: 'testing text',
-        userId: '3',
-    },
-    {
-        id: '4',
-        text: 'testing text',
-        userId: '4',
-    },
-];
+export const NEXT_ID = sortedTweets[0].id + 1;
+
+export const CURRENT_USER = {
+    userId: 4,
+    userName: 'Umlaut',
+    userHandle: '@LatinLang',
+};
 
 const App: FunctionComponent<{}> = () => {
     const [tweetList, setTweetList] = useState(tweets);
