@@ -5,6 +5,6 @@ interface User {
 }
 
 export interface TweetType extends User {
-    id: number;
+    id: number | null;
     text: string;
 }
