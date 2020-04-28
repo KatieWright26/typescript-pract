@@ -32,6 +32,7 @@ const Select = () => {
                 <option value="fr-FR">French</option>
                 <option value="es-CL">Spanish</option>
                 <option value="de">German</option>
+                <option value="it-IT">Italian (selecting this will throw an error)</option>
             </select>
             <h1>Supported app locales: {languages.join(', ')}</h1>
             <p>The original user language was {window.navigator.language}</p>
