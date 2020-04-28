@@ -6,7 +6,7 @@ const Tweets: FunctionComponent<{tweets: Array<TweetType>}> = ({ tweets }) => (
     <div>
         <h2>List of Tweets</h2>
         {tweets.map(
-            tweet => <Tweet tweet={tweet} key={tweet.id}/>,
+            tweet => <Tweet tweet={tweet} key={`tweet${tweet.id}`}/>,
         )}
     </div>
 );

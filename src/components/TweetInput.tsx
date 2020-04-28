@@ -1,6 +1,6 @@
 /* eslint-disable id-length */
 /* eslint-disable id-blacklist */
-import { CURRENT_USER, NEXT_ID } from '../App';
+import { CURRENT_USER, NEXT_ID } from '../pages/Tweet';
 import React, { FunctionComponent, useState } from 'react';
 import { TweetType } from '../types';
 
@@ -39,7 +39,12 @@ const TweetInput: FunctionComponent<Props> = (props: Props) => {
 
     return (
         <form onSubmit={event => prepareTweet(event)}>
-            <input type="text" value={tweet.text} name="text" onChange={event => handleChange(event)}/>
+            <input
+                type="text"
+                value={tweet.text}
+                name="text"
+                onChange={event => handleChange(event)}
+            />
             <input value="Submit!" type="submit" disabled={isEmpty}/>
         </form>
     );

@@ -5,7 +5,7 @@ const Tweet: FunctionComponent<{tweet: TweetType}> = ({ tweet }) => {
     const { userName, userHandle, id, text } = tweet;
 
     return (
-        <div key={id}>
+        <div key={`tweet-${id}`}>
             <h4>{text}</h4>
             <p><strong>{userName}</strong> {userHandle}</p>
         </div>

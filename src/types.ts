@@ -1,10 +1,10 @@
 interface User {
-    userId: number;
+    userId: string;
     userName: string;
     userHandle: string;
 }
 
 export interface TweetType extends User {
-    id: number | null;
+    id: string;
     text: string;
 }
