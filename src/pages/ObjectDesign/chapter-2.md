@@ -1,5 +1,5 @@
 
-   Object Design Notes - Chapter 2
+   # Object Design Notes - Chapter 2
    
    - Applications have two kinds of objects, Services and Material objects.
    - Services are &#34;do-ers&#34;, and are named after their actions or responsibilities, such as _controller_, _renderer_. They are constructed via the `new` keyword to instantiate a class. They are created once and can run many times, however their inner workings are immutable.
@@ -30,7 +30,7 @@ A service takes any number of dependencies or configuration values once initiali
  
 This advantage of this pattern is that our UserRepository class can't be accidentally created while missing its required values. It's important to also only pass the values that are specifically required by the class, rather than an entire blob of unrelated data.
 
-Excerise answer
+Exercise answer
 ```
 final class FileCache implements Cache {}
         private AppConfig appConfig;

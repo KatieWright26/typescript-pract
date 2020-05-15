@@ -35,6 +35,35 @@ e.g.
     }
 ```
 
+- Type assertions don't actually check the type of our variable; the compiler is trusting the developer knows the correct type to set. This is pretty fragile and can lead to runtime errors.
+
+```
+    const validCountryCodes = ['uk', 'aus', 'nl'] as const;
+    type ValidCountryCode = typeof validCountryCodes[number]
+    const currentCountryCode: unknown = 'nz';
+    const validCountryCode: ValidCountryCode = currentCountryCode as ValidCountryCode
+    setCountryCode(validCountryCode) // No error
+```
+
+There are limited scenarios where this syntax is appropriate:
+
+    1. External code is incorrectly typed
+    2. When we are testing possible future types:
+```
+    // countryCode.tsx
+    
+    const validCountryCodes = ['uk', 'aus', 'nl'] as const;
+    type ValidCountryCode = typeof validCountryCodes[number]
+    const [countryCode, setCountryCode] = useState<ValidCountryCode>('uk')
+
+    // test.tsx
+
+    it('throws an error for invalid countryCode', () => {
+        // mock for setCountryCode
+        () => renderCountryCode('nz') // would throw an error post runtime.
+        () => renderCountryCode('nz' as unknown as ValidCountryCode) // throws error we are testing in the countryCode.tsx
+    })
+```
 # What is the `any` type? Why should/ shouldn't we use it?
 - All Javascript types are assignable to `any`. e.g.
 ```
