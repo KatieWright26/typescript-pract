@@ -9,6 +9,8 @@ const Navigation = () => (
                 <Link to="/select">Select</Link> |
                 <Link to="/generics">Generics</Link> |
                 <Link to="/object-design-notes">Object Design Notes</Link> |
+                <Link to="/unknown-type">Unknown Type</Link> |
+
             </nav>
         </article>
         <hr/>
