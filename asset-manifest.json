@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/typescript-pract/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/typescript-pract/static/js/main.bd3bb277.chunk.js",
+    "main.js.map": "/typescript-pract/static/js/main.bd3bb277.chunk.js.map",
+    "runtime-main.js": "/typescript-pract/static/js/runtime-main.00562b27.js",
+    "runtime-main.js.map": "/typescript-pract/static/js/runtime-main.00562b27.js.map",
+    "static/js/2.6b5c1dd3.chunk.js": "/typescript-pract/static/js/2.6b5c1dd3.chunk.js",
+    "static/js/2.6b5c1dd3.chunk.js.map": "/typescript-pract/static/js/2.6b5c1dd3.chunk.js.map",
+    "index.html": "/typescript-pract/index.html",
+    "precache-manifest.273a6fe01c630dfbd3b17eea56cc95e8.js": "/typescript-pract/precache-manifest.273a6fe01c630dfbd3b17eea56cc95e8.js",
+    "service-worker.js": "/typescript-pract/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/typescript-pract/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.6b5c1dd3.chunk.js.LICENSE.txt": "/typescript-pract/static/js/2.6b5c1dd3.chunk.js.LICENSE.txt",
+    "static/media/FAQ.md": "/typescript-pract/static/media/FAQ.18003fe6.md",
+    "static/media/chapter-2.md": "/typescript-pract/static/media/chapter-2.c3a8e834.md"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00562b27.js",
+    "static/js/2.6b5c1dd3.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.bd3bb277.chunk.js"
+  ]
+}
