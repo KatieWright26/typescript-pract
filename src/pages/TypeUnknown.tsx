@@ -9,18 +9,7 @@ const TypeUnknown = (): JSX.Element => {
     const stringValue: unknown = 'Katie';
     const numberValue: unknown = 29;
     const [notes, setNotes] = useState('');
-    const readmePath = require('./FAQ.md');
-    const validCountryCodes = ['uk', 'aus', 'nl'] as const;
-
-    type ValidCountryCode = typeof validCountryCodes[number]
-    const [countryCode, setCountryCode] = useState<ValidCountryCode>('uk');
-
-    /*
-     * Const currentCountryCode: unknown = 'nz';
-     * const validCountryCode = currentCountryCode as ValidCountryCode;
-     */
-
-    // SetCountryCode(validCountryCode);
+    const readmePath = require('./TypescriptNotes/Unknown.md');
 
     fetch(readmePath)
         .then(response => response.text())
